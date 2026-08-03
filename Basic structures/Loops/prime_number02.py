@@ -1,10 +1,13 @@
 n = int(input())
-m = 0
+m = 1
+k = 2
+i = n
+res = ""
 while (n != m):
-    for i in range(2, n + 1):
-        if (n % i == 0):
-            n = n // i
-            m *= i
-            print(i, sep=" * ", end="")
-        print(i)
-    
+    if ((i % k) == 0):
+        m *= k
+        res += str(k) + " * "
+        i = i // k
+    else:
+        k += 1
+print(res[:-3])
