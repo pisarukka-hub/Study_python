@@ -1,3 +1,4 @@
+# Check if a number is a palindrome 
 num = int(input())
 N = num
 palindrome = 0

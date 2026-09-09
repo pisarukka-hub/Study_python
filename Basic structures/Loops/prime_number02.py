@@ -1,13 +1,14 @@
-n = int(input())
-m = 1
+# Find the prime factorization of a number
+num = int(input())
+check = 1
 k = 2
-i = n
+residue = num
 res = ""
-while (n != m):
-    if ((i % k) == 0):
-        m *= k
+while (num != check):
+    if ((residue % k) == 0):
+        check *= k
         res += str(k) + " * "
-        i = i // k
+        residue = residue // k
     else:
         k += 1
 print(res[:-3])

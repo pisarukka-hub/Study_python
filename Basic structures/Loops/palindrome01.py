@@ -1,3 +1,4 @@
+# Check if a number is a palindrome
 num = int(input())    
 find_digit = num
 digit = 0.1
