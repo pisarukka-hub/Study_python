@@ -2,8 +2,7 @@
 linesize = 0
 line = ""
 endline = 1
-N = int(input())
-for i in range(1, N + 1):
+for i in range(1, int(input()) + 1):
     if (i <= endline):
         line = line + str(i) + " "
     else:
