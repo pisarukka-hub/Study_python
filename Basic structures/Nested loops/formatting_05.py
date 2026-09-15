@@ -1,10 +1,11 @@
-# Showing numbers in a rectangular pattern in a row-wise manner
+# Showing numbers in a rectangular pattern in a zig-zag manner 
 
 #  1  2  3  4  5  6  7
-#  8  9 10 11 12 13 14
+# 14 13 12 11 10  9  8
 # 15 16 17 18 19 20 21
-# 22 23 24 25 26 27 28
+# 28 27 26 25 24 23 22
 # 29 30 31 32 33 34 35
+# 42 41 40 39 38 37 36
 
 numbers_of_lines = int(input())
 line_length = int(input())
@@ -13,9 +14,12 @@ i = numbers_of_lines * line_length
 while (i != 0):
     column_length += 1
     i //= 10
-for i in range(numbers_of_lines):
+for i in range(0, numbers_of_lines, 2):
     for k in range(1, line_length):
         print(f"{(k + i * line_length): >{column_length}}", end=" ")
     print(f"{(i + 1) * line_length: >{column_length}}")
+    for k in range(1, line_length):
+        print(f"{((line_length + 1 - k) + (i + 1) * line_length): >{column_length}}", end=" ")
+    print(f"{((i + 1) * line_length + 1): >{column_length}}")
 
-                
+            

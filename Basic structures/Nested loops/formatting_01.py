@@ -1,4 +1,10 @@
 # Formatting numbers in a triangular pattern
+
+# 1
+# 2 3
+# 4 5 6
+# 7 8 9 10
+
 linesize = 0
 line = ""
 endline = 1
