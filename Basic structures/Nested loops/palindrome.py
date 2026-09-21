@@ -1,6 +1,6 @@
-#Count how many palindromes is from n numbers
+# Count how many palindromes is from n numbers 
+count = 0
 for i in range(int(input())):
-    count = 0
     number = int(input())
     number_str = str(number)
     palindrome = ""
@@ -9,8 +9,4 @@ for i in range(int(input())):
         number //= 10
     if (palindrome == number_str):
         count += 1
-    print(number_str)
-    print(palindrome)
-    print(count)    
-    palindrome = ""
 print(count)
