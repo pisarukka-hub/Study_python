@@ -47,4 +47,3 @@ for i in range(1, number + 1):
         this_line_size += 1
         endline = i + this_line_size
 print(f"{line[:-1]: ^{line_size}}")
-
