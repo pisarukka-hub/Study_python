@@ -85,12 +85,12 @@ if (flag):
     print(Name_3, " ", Rating_3, "%", sep="")
 
     if (Average > 50):
-        print("Курс усваивается хорошо")
+        print("The course is easy to understand")
     else: 
-        print("Курс усваивается плохо")
+        print("The course is hard to understand")
 
 else:
-    print("Во введённых данных ошибка")
+    print("error in input data")
 
 
 
