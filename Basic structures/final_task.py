@@ -30,48 +30,65 @@
 # Курс усваивается хорошо/плохо
 
 N, M, Q, cw, sw, hw, tw = map(int, input().split())
-Rating_1, Rating_2, Rating_3 = 0, 0, 0
+Rating_1, Rating_2, Rating_3 = -1, -1, -1
+Name_1, Name_2, Name_3 = "", "", ""
 Max = 0
-Min = Q
+Min = Q + 1
 Sum = 0
 flag = True
+
 if ((N >= 3) and (M > 0) and (cw > 0) and (sw > 0) and (hw > 0) and (tw > 0)):
+
     for student in range(N):
         student_name = str(input())
         rating = 0
+
         for lesson in range(M):
             a, b, c, d = map(int, input().split(","))
             rating += (a * cw) + (b * sw) + (c * hw) + (d * tw)
-        rating //= Q 
+
         if (rating > Q):
             flag = False
+            break
+
+        Sum += rating
+
+        if rating > Rating_1:
+            Rating_3, Name_3 = Rating_2, Name_2
+            Rating_2, Name_2 = Rating_1, Name_1
+            Rating_1, Name_1 = rating, student_name
+            Max = rating
+
+        elif rating > Rating_2:
+            Rating_3, Name_3 = Rating_2, Name_2
+            Rating_2, Name_2 = rating, student_name
+
+        elif rating > Rating_3:
+            Rating_3, Name_3 = rating, student_name
         if (rating < Min):
             Min = rating
-        if (rating > Rating_3):
-            if (rating > Rating_2):
-                if (rating > Rating_1):
-                    Max = rating
-                    Rating_1 = rating
-                    Name_1 = student_name
-                else:
-                    Rating_2 = rating
-                    Name_2 = student_name
-            else:
-                Rating_3 = rating
-                Name_3 = student_name
-        Sum += rating
+
 else: 
     flag = False
+
 if (flag):
-    Average = Sum // N
+    Rating_1 = round(Rating_1 / Q * 100)
+    Rating_2 = round(Rating_2 / Q * 100)
+    Rating_3 = round(Rating_3 / Q * 100)
+    Average = round(Sum / N / Q * 100)
+    Max = Rating_1
+    Min = round(Min / Q * 100)
+
     print(Max, Average, Min)
-    print(Name_1, Rating_1, "%")
-    print(Name_2, Rating_2, "%")
-    print(Name_3, Rating_3, "%")
+    print(Name_1, " ", Rating_1, "%", sep="")
+    print(Name_2, " ", Rating_2, "%", sep="")
+    print(Name_3, " ", Rating_3, "%", sep="")
+
     if (Average > 50):
         print("Курс усваивается хорошо")
     else: 
         print("Курс усваивается плохо")
+
 else:
     print("Во введённых данных ошибка")
 
