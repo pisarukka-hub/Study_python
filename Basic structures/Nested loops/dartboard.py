@@ -1,4 +1,4 @@
-# Show the numbers in rectangle pattern
+# Show the numbers in a rectangular pattern
 
 # 1 1 1 1 1
 # 1 2 2 2 1

@@ -1,5 +1,5 @@
-# The elf, gnome, and human have the same number on same position of their two-digit numbers 
-# Find common digit
+# The elf, gnome, and human have the same digit in the same position in their two-digit numbers
+# Find the common digit
 elfs = int(input())
 gnoms = int(input())
 people = int(input())

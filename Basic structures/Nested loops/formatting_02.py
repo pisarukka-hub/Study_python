@@ -1,4 +1,4 @@
-# Show time to start for n racers
+# Show the start times for n racers
 for i in range(1, (n := int(input())) + 1):
     k = i + 2
     for j in range(k):

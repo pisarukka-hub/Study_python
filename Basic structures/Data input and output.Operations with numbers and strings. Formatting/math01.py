@@ -1,5 +1,5 @@
 # weight = 2.5 and price = 38
-# find change from the money given by the customer
+# Find the change from the amount of money given by the customer
 cost = int(2.5 * 38)
 money = int(input())
 change = money - cost

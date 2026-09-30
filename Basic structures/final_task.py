@@ -1,7 +1,7 @@
 # Analysis of the educational program
 
-# N (num_students) — numbers of students
-# M (num_lessons) — numbers of lessons
+# N (num_students) — number of students
+# M (num_lessons) — number of lessons
 # Q (max_rating) — max rating
 # cw (classwork_coefficient) — classwork coefficient
 # sw (selfwork_coefficient) — selfwork coefficient

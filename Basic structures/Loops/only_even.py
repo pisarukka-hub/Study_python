@@ -1,4 +1,4 @@
-# Left only even digits of a number
+# Leave only the even digits of a number
 res = ""
 n = int(input())
 while ((n != 0)):

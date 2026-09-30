@@ -1,4 +1,4 @@
-# Count how many palindromes is from n numbers 
+# Count how many of the n numbers are palindromes
 count = 0
 for i in range(int(input())):
     number = int(input())

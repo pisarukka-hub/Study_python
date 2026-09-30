@@ -1,4 +1,4 @@
-# Cut titles of they are too long
+# Cut titles if they are too long
 L = int(input())
 for i in range(int(input())):
     head = str(input())

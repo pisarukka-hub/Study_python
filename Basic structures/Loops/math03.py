@@ -1,5 +1,4 @@
-# Left only every second digit of a number (from highest including)
-n = int(input())
+# Leave only every second digit of a number, starting from the most significant digit
 even = ""
 odd = ""
 residue = 0

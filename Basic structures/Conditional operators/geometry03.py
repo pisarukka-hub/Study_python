@@ -1,5 +1,5 @@
-# There is a ideal circle island
-# And a dangerous zone insade the island with complex shape (scheme.png)
+# There is an ideal circular island
+# There is also a dangerous zone inside the island with a complex shape (scheme.png)
 x = float(input())
 y = float(input())
 if x * x + y * y > 100:

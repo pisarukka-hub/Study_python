@@ -1,4 +1,4 @@
-# Find the number system with biggest sum of digits
+# Find the number system with the largest sum of digits
 
 number = int(input())
 answer = 0

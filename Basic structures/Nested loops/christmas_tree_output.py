@@ -11,24 +11,24 @@ line = ""
 number_of_longest_line = 0
 rest_of_numbers = number
 
-# Find the numbers of lines 
+# Find the number of lines 
 while (rest_of_numbers >= number_of_longest_line):
     rest_of_numbers -= number_of_longest_line
     number_of_longest_line += 1
 
-# Find size of the the last line
+# Find the size of the last line
 last_line_size = 0
 for i in range(number - rest_of_numbers + 1, number + 1):
     last_line_size += len(str(i)) + 1
 last_line_size -= 1
 
-# Find size of the penultimate line
+# Find the size of the penultimate line
 penul_line_size = 0
 for i in range(number - rest_of_numbers - number_of_longest_line + 2, number - rest_of_numbers + 1):
     penul_line_size += len(str(i)) + 1
 penul_line_size -= 1
 
-# Find size of the longest line
+# Find the size of the longest line
 if (last_line_size > penul_line_size):
     line_size = last_line_size
 else: 

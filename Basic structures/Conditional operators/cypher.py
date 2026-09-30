@@ -1,4 +1,4 @@
-# New password is ragging of two sums of digits of the old password.
+# The new password is formed by concatenating two sums of digits from the old password.
 # The first sum is the sum of the last two digits, and the second sum is the sum of the first two digits.
 # Print the larger sum first, then the smaller one.
 password = int(input())

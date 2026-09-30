@@ -1,4 +1,4 @@
-# Find sum of digits of k numbers.
+# Find the sum of the digits of k numbers.
 sum = 0
 for i in range(k := int(input())):
     n = int(input())
