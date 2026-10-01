@@ -1,4 +1,5 @@
 # Leave only every second digit of a number, starting from the most significant digit
+n = int(input())
 even = ""
 odd = ""
 residue = 0
