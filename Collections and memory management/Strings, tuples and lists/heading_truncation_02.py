@@ -7,9 +7,11 @@ for i in range(int(input())):
 i = 0
 k = 0
 result = []
-while len(headings[i]) < length - k:
-        k+= len(headings[i])
+for i in range(len(headings)):
+    if len(headings[i]) < length - k:
+        k += len(headings[i])
         result.append(headings[i])
-        i+= 1
+    else:
+        break
 result.append(headings[i][:length - k] + "...")
-print(*result, sep='\n' )
+print(*result, sep='\n')
