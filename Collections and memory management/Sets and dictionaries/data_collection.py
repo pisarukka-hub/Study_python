@@ -1,11 +1,19 @@
-d = []
+# Make a dictionary with names and preferences, 
+# then search for names that match a given preference.
+d = {}
 names = []
 for i in range(int(input())):
-    name, preference = str(input()).split()
-    d[name] += preference
+    input_data = str(input()).split()
+    name = input_data[0]
+    preference = str(" ".join(input_data[1:]))
+    d[name] = preference
+
+search = str(input())
+
 for name, preference in d.items():
-    if str(input()).replace(" ", "") in preference:
+    if search in preference:
         names.append(name)
+        
 names.sort()
 if len(names) > 0:
     print("\n".join(names))
